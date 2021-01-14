@@ -37,7 +37,7 @@ b47947e7ba5e   postgres   "docker-entrypoint.s…"  6 seconds ago   Up 2 seconds
 
 Já temos um banco de dados rodando em nossa máquina, conseguimos acessá-lo utilizando a interface de linha de comando PSQL, mas como configurar, criar usuários, salvar e exportar os dados para edição? Estudar os comandos básicos para utilizar um software é o primeiro passo. Para executar os comandos aqui listados é necessário ter a instalação do [PostgreSQL](https://www.postgresql.org/) linha de comando.
 
-Vamos entrar na interface de linha de comando do banco de dados PostgreSQL utilizando o camando abaixo:
+Vamos entrar na interface de linha de comando do banco de dados PostgreSQL utilizando o camando abaixo (Nós definimos a senha no camando acima -e POSTGRES_PASSWORD=postgres):
 
 ```
 psql -h 0.0.0.0 -p 5480 -U postgres
