@@ -15,6 +15,7 @@ Este projeto consiste no desenvolvimento de uma API RESTful para o controle de u
 ## Desenvolvimento
 
 - [**Passo 1**: Configuração do banco de dados hospedado em um container Docker](./db);
-
+- **Passo 2**: Configuração inicial da API para controle de usuários;
+- **Passo 3**: Operações CRUD no banco de dados;
 
 > **Obs.: Todos os comandos e tecnologias são explicados nos [vídeos no youtube](https://www.youtube.com/playlist?list=PLyBgv5rSdkMYgPsmDJg-6sgh4UmmSmnOd).**

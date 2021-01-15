@@ -43,5 +43,98 @@ Vamos entrar na interface de linha de comando do banco de dados PostgreSQL utili
 psql -h 0.0.0.0 -p 5480 -U postgres
 ```
 
+Vamos criar um banco de dados novo com o comando abaixo, nunca utilize o banco de dados de nome postgres, sempre crie um novo com um novo usuário Lembre-se que a senha do usuário root defininos como `postgres`:
+
+```
+createdb -h 0.0.0.0 -p 5480 -U postgres users_control "Controle de usuários"
+```
+
+Vamos testar a conexão com o banco de dados recém criado utilizando o comando abaixo:
+
+```
+psql -h 0.0.0.0 -p 5480 -U postgres -d users_control
+```
+
+Com a interface de linha de comando em aberto, execute a seguinte linha em SQL:
+
+```
+SELECT table_name FROM information_schema.tables WHERE table_schema='public';
+```
+
+Bom a saída deve ser parecida com essa:
+
+```
+users_control=# SELECT table_name FROM information_schema.tables WHERE table_schema='public';
+ table_name
+------------
+(0 rows)
+```
+
+Estamos com 0 tabelas em nosso banco de dados, vamos salvar alguns dados? Mas antes vamos criar um usuário para nossa aplicação, lembrando que o recomendado é que a aplicação nunca utilize o usuário root do banco de dados. Para criar um usuário (é claro que precisamos estar com o CLI do banco em aberto), vamos executar o comando abaixo em PSQL:
+
+```
+CREATE USER api_restful WITH PASSWORD 'api_spring_restful';
+```
+
+Se o resultado foi ```CREATE ROLE``` quer dizer que ocorreu tudo bem, mas para ter certeza vamos sair da linha de comando do BD e vamos entrar de novo com o novo usuário (para sair é simples `Ctrl + D`):
+
+```
+psql -h 0.0.0.0 -p 5480 -U api_restful -d users_control
+```
+
+Pronto agora podemos relaxar, pois não estamos mais com o poderes do root (o símbolo # foi substituído por >). Agora que sabemos que o novo usuário está funcionando, vamos salvar alguns dados em nome dele (Ctrl + D mais uma vez).
+
+Nossos dados possuem a seguinte estrutura, mas lembrando que podemos salvar de várias formas:
+
+<p align = "center">
+  <img width = "300px" src = "./db-model.png">
+</p>
+
+Possuímos nossos dados em tabelas CSV, e vamos importá-las utilizando o seguinte comando que vai executar o [arquivo sql](./create_tables.sql), explicado no vídeo:
+
+```
+psql -h 0.0.0.0 -p 5480 -U postgres -d shapes -f create-tables.sql
+```
+
+Verifique se as tabelas foram criadas utilizando o comando usado anteriormente:
+
+```
+users_control=> SELECT table_name FROM information_schema.tables WHERE table_schema='public';
+     table_name
+---------------------
+ users
+ user_authorizations
+(2 rows)
+```
+
+Tente acessar as tabelas utilizando os comandos básicos do SQL:
+
+```
+users_control=> select * from users;
+ id | username |                           password
+----+----------+--------------------------------------------------------------
+  1 | admin    | $2a$10$TS76TLIpbza7YTiRbX3FBunc56D9MgeFoMXHqqiJOIn0LW9asLnyC
+  2 | user     | $2a$10$GEBIkDxEZDC5X35r86W0SelBMDM45/lbp3CpJvaPmq4YT9TWb2Z6O
+(2 rows)
+```
+
+Agora quero exportar esses dados para executar em outra máquina.
+Executar os comandos um de cada vez abaixo para exportar as tabelas no banco de dados:
+
+```
+psql -h 0.0.0.0 -p 5480 -U postgres -d users_control \
+    -c "\COPY users TO '/home/${USER}/csv/users_exported.csv' DELIMITER ';' CSV HEADER;"
+```
+
+```
+psql -h 0.0.0.0 -p 5480 -U postgres -d users_control \
+    -c "\COPY user_authorizations TO '/home/${USER}/csv/user_authorizations_exported.csv' DELIMITER ';' CSV HEADER;"
+```
+
+> Se deu um erro, execute o seguinte comando para autorizar a excrita do banco de dados na pasta (No linux), execute os comandos acima mais uma vez e os dados estaram nesta pasta:
+
+```
+mkdir /home/${USER}/csv && sudo chmod 777 /home/${USER}/csv
+```
 
 > **Obs.: Todos os comandos e tecnologias são explicados nos [vídeos no youtube](https://www.youtube.com/playlist?list=PLyBgv5rSdkMYgPsmDJg-6sgh4UmmSmnOd).**
