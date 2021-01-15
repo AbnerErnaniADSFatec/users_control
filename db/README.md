@@ -93,7 +93,7 @@ Nossos dados possuem a seguinte estrutura, mas lembrando que podemos salvar de v
 Possuímos nossos dados em tabelas CSV, e vamos importá-las utilizando o seguinte comando que vai executar o [arquivo sql](./create_tables.sql), explicado no vídeo:
 
 ```
-psql -h 0.0.0.0 -p 5480 -U postgres -d users_control -f create-tables.sql
+psql -h 0.0.0.0 -p 5480 -U postgres -d users_control -f create_tables.sql
 ```
 
 Verifique se as tabelas foram criadas utilizando o comando usado anteriormente:
