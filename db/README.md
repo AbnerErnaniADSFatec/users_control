@@ -82,7 +82,7 @@ Se o resultado foi ```CREATE ROLE``` quer dizer que ocorreu tudo bem, mas para t
 psql -h 0.0.0.0 -p 5480 -U api_restful -d users_control
 ```
 
-Pronto agora podemos relaxar, pois não estamos mais com o poderes do root (o símbolo # foi substituído por >). Agora que sabemos que o novo usuário está funcionando, vamos salvar alguns dados em nome dele (Ctrl + D mais uma vez).
+Pronto agora podemos relaxar, pois não estamos mais com todos os poderes do root (o símbolo # foi substituído por >). Agora que sabemos que o novo usuário está funcionando, vamos salvar alguns dados em nome dele (Ctrl + D mais uma vez).
 
 Nossos dados possuem a seguinte estrutura, mas lembrando que podemos salvar de várias formas:
 
