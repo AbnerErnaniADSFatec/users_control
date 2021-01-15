@@ -43,7 +43,7 @@ Vamos entrar na interface de linha de comando do banco de dados PostgreSQL utili
 psql -h 0.0.0.0 -p 5480 -U postgres
 ```
 
-Vamos criar um banco de dados novo com o comando abaixo, nunca utilize o banco de dados de nome postgres, sempre crie um novo com um novo usuário Lembre-se que a senha do usuário root defininos como `postgres`:
+Vamos criar um banco de dados novo com o comando abaixo, nunca utilize o banco de dados de nome postgres, sempre crie um novo com um novo usuário. Lembre-se que a senha do usuário root defininos como `postgres`:
 
 ```
 createdb -h 0.0.0.0 -p 5480 -U postgres users_control "Controle de usuários"
@@ -93,7 +93,7 @@ Nossos dados possuem a seguinte estrutura, mas lembrando que podemos salvar de v
 Possuímos nossos dados em tabelas CSV, e vamos importá-las utilizando o seguinte comando que vai executar o [arquivo sql](./create_tables.sql), explicado no vídeo:
 
 ```
-psql -h 0.0.0.0 -p 5480 -U postgres -d shapes -f create-tables.sql
+psql -h 0.0.0.0 -p 5480 -U postgres -d users_control -f create-tables.sql
 ```
 
 Verifique se as tabelas foram criadas utilizando o comando usado anteriormente:
