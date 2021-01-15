@@ -70,7 +70,7 @@ users_control=# SELECT table_name FROM information_schema.tables WHERE table_sch
 (0 rows)
 ```
 
-Estamos com 0 tabelas em nosso banco de dados, vamos salvar alguns dados? Mas antes vamos criar um usuário para nossa aplicação, lembrando que o recomendado é que a aplicação nunca utilize o usuário root do banco de dados. Para criar um usuário (é claro que precisamos estar com o CLI do banco em aberto), vamos executar o comando abaixo em PSQL:
+Estamos com 0 tabelas em nosso banco de dados, vamos salvar alguns dados então? Mas antes vamos criar um usuário para nossa aplicação, lembrando que o recomendado é que a aplicação nunca utilize o usuário root do banco de dados. Para criar um usuário (é claro que precisamos estar com o CLI do banco em aberto), vamos executar o comando abaixo em PSQL:
 
 ```
 CREATE USER api_restful WITH PASSWORD 'api_spring_restful';
