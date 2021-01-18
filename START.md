@@ -4,7 +4,7 @@
 [![SpringBoot](https://img.shields.io/badge/spring-latest-green)](https://spring.io/)
 [![Gradle](https://img.shields.io/badge/gradle-5+-green)](https://gradle.org/)
 
-Chegando aqui vamos levar em conta que você já executou todos os comandos para a configuração do banco de dados, e o seu docker está hospedando um container com este banco de dados, sendo que você já importou as tabelas e os dados que você quer editar.
+Chegando aqui, nós vamos levar em conta que você já executou todos os comandos para a configuração do banco de dados, e o seu docker está hospedando um container com este banco de dados, sendo que você já importou as tabelas e os dados que você quer editar.
 
 ## Gradle
 
