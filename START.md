@@ -85,4 +85,6 @@ BUILD SUCCESSFUL in 2s
 
 ## Spring Boot
 
-**UNDER DEVELOPMENT**
+**Under Development**
+
+> **Obs.: Todos os comandos e tecnologias são explicados nos [vídeos no youtube](https://www.youtube.com/playlist?list=PLyBgv5rSdkMYgPsmDJg-6sgh4UmmSmnOd).**
