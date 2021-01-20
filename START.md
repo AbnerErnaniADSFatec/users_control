@@ -8,6 +8,10 @@ Chegando aqui, nós vamos levar em conta que você já executou todos os comando
 
 ## Gradle
 
+O Gradle é uma ferramenta para a contrução de aplicações (o famoso build/ para compartilhar com os coleguinhas). A utilização de ferramentas de construção de software serve para automatizar várias atividades do ciclo de desenvolvimento de software, incluindo tarefas tais como a obtenção de dependências, execução de comandos de compilação.
+
+Processos repetitivos que podem ser automatizados, a maioria dos projetos de software fazem uso de componentes já desenvolvidos por terceiros ou reaproveitados de outros projetos. Acarreta problemas de dependências.
+
 Para começar a configuração inicial da nossa aplicação vamos executar o seguinte comando na pasta root do seu projeto. Por exemplo se você só deu clone neste projeto, não será necessário, mas para criar novo, é necessário criar uma pasta com o nome de sua preferência e abrir o terminal ou cmd:
 
 ```
@@ -85,6 +89,6 @@ BUILD SUCCESSFUL in 2s
 
 ## Spring Boot
 
-**Under Development**
+O SpringBoot é um framework produzido por um projeto que visa facilitar o desenvolvimento, configuração e publicação de aplicações que façam uso dos frameworks da família Spring. Um framework nada mais é que um projeto que tem como principal objetivo resolver problemas recorrentes com uma abordagem genérica, permitindo ao desenvolvedor focar seus esforços na resolução do problema em si, e não ficar reescrevendo software.
 
 > **Obs.: Todos os comandos e tecnologias são explicados nos [vídeos no youtube](https://www.youtube.com/playlist?list=PLyBgv5rSdkMYgPsmDJg-6sgh4UmmSmnOd).**

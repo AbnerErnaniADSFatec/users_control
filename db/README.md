@@ -8,6 +8,8 @@ Construindo a base da aplicação com o gerenciador de containers docker, onde b
 
 ## Docker
 
+O Docker é um sistema gerenciador de containers, os containers são parecidos com máquinas virtuais, porém são mais leves pois utilizam o sistema operacional do seu computador como hospedeiro. Vou deixar o link para uma apostila em docker, pos iremos utilizar muitos dos comandos básicos em docker.
+
 Com o [**Docker**](https://www.docker.com/) instalado, vamos baixar a imagem docker do banco de dados Postgres:
 
 ```
@@ -34,6 +36,8 @@ b47947e7ba5e   postgres   "docker-entrypoint.s…"  6 seconds ago   Up 2 seconds
 ```
 
 ## PostgreSQL
+
+O PostgreSQL é um sistema gerenciador de banco de dados objeto-relacional, gratuito e de código fonte aberto, desenvolvido a partir do projeto Postgres, iniciado em 1986, na Universidade da Califórnia em Berkeley, sob a liderança do professor Michael Stonebraker.
 
 Já temos um banco de dados rodando em nossa máquina, conseguimos acessá-lo utilizando a interface de linha de comando PSQL, mas como configurar, criar usuários, salvar e exportar os dados para edição? Estudar os comandos básicos para utilizar um software é o primeiro passo. Para executar os comandos aqui listados é necessário ter a instalação do [PostgreSQL](https://www.postgresql.org/) linha de comando.
 
