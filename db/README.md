@@ -16,7 +16,7 @@ Com o [**Docker**](https://www.docker.com/) instalado, vamos baixar a imagem doc
 docker pull postgres
 ```
 
-Vamos executar um container com esta imagem com o seguinte comando:
+Vamos executar um container com esta imagem com o seguinte comando  (-d --detach (-d) mode 'rodar em segundo plano'):
 
 ```
 docker run --name postgresql -p 5480:5432 -e POSTGRES_PASSWORD=postgres -d postgres
